@@ -64,16 +64,16 @@ params:
   # profile-mode
   profileMode:
     enabled: enable # needs to be explicitly set
-    title: ExampleSite
+    title: alld.dev
     subtitle: "This is subtitle"
     imageUrl: ""
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
     buttons:
-      - name: Posts
+      - name: Blog
         url: posts
-      - name: Tags
+      - name: Sobre
         url: tags
 
   # home-info mode
