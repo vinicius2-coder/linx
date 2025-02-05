@@ -20,10 +20,10 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
-  author: Me
+  title: alld.dev
+  description: "Site pessoal de Alessandro César Rosão"
+  keywords: [Blog, Portfolio, Desenvolvedor, SysAdmin, Hacking]
+  author: alld.dev
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
