@@ -42,7 +42,7 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: false
   ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
+  ShowRssButtonInSectionTermList: false
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
@@ -74,7 +74,7 @@ params:
     imageUrl: "/icon.ico"
     imageWidth: 120
     imageHeight: 120
-    imageTitle: my image
+    imageTitle: logo
     buttons:
       - name: Postagens
         url: posts
@@ -83,18 +83,18 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Olá \U0001F44B"
+    Content: Sejam bem vindos!
 
   socialIcons:
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/AlldDev"
     - name: linkedin
-      url: "https://github.com/"
+      url: "https://www.linkedin.com/in/alessandro-césar-rosão/"
     - name: instagram
-      url: "https://github.com/"
+      url: "https://instagram.com/alld.dev"
     - name: email
-      url: "https://github.com/"
+      url: "mailto:suporte@alld.dev"
     
   # analytics:
     # google:
