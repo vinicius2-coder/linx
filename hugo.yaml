@@ -3,6 +3,7 @@ title: alld.dev
 pagerSize: 5
 theme: PaperMod
 languageCode: pt
+defaultContentLanguage: pt
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -76,10 +77,10 @@ params:
     imageHeight: 120
     imageTitle: my image
     buttons:
-      - name: Blog
+      - name: Postagens
         url: posts
       - name: Sobre
-        url: tags
+        url: about
 
   # home-info mode
   homeInfoParams:
@@ -96,13 +97,13 @@ params:
     - name: instagram
       url: "https://github.com/"
 
-  analytics:
-    google:
-      SiteVerificationTag: "XYZabc"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
+  # analytics:
+    # google:
+      # SiteVerificationTag: "XYZabc"
+    # bing:
+      # SiteVerificationTag: "XYZabc"
+    # yandex:
+      # SiteVerificationTag: "XYZabc"
 
   cover:
     hidden: true # hide everywhere but not in structured data
@@ -132,26 +133,26 @@ params:
 menu:
   main:
     - identifier: blog
-      name: Blog
+      name: ~/postagens
       url: /posts/
       weight: 10
     - identifier: tags
-      name: tags
+      name: ~/tags
       url: /tags/
       weight: 20
     - identifier: search
-      name: Search
+      name: ~/pesquisar
       url: search/
       weight: 30
-    - identifier: example
-      name: example.org
+    - identifier: alld.dev
+      name: ~/alld.dev
       url: https://example.org
       weight: 40
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
-pygmentsUseClasses: true
-markup:
-  highlight:
-    noClasses: false
+# pygmentsUseClasses: true
+# markup:
+  # highlight:
+    # noClasses: false
     # anchorLineNos: true
     # codeFences: true
     # guessSyntax: true

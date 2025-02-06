@@ -2,24 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>alld.dev</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:8080/</link>
     <description>Recent content on alld.dev</description>
     <generator>Hugo</generator>
-    <language>en</language>
+    <language>pt</language>
     <lastBuildDate>Tue, 15 Sep 2020 11:30:03 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:8080/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My post</title>
-      <link>http://localhost:1313/posts/example/</link>
+      <link>http://localhost:8080/posts/example/</link>
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      <guid>http://localhost:1313/posts/example/</guid>
+      <guid>http://localhost:8080/posts/example/</guid>
       <description>&lt;h1 id=&#34;example&#34;&gt;Example&lt;/h1&gt;</description>
     </item>
     <item>
-      <title>Search</title>
-      <link>http://localhost:1313/search/</link>
+      <title>Sobre</title>
+      <link>http://localhost:8080/about/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <guid>http://localhost:8080/about/</guid>
+      <description>&lt;h1 id=&#34;sobre&#34;&gt;Sobre&lt;/h1&gt;&#xA;&lt;p&gt;O que posso dizer?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pesquisar</title>
+      <link>http://localhost:8080/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/search/</guid>
+      <guid>http://localhost:8080/search/</guid>
       <description>search</description>
     </item>
   </channel>
