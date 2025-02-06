@@ -30,8 +30,7 @@ params:
   description: "Site pessoal de Alessandro César Rosão"
   keywords: ["hacking", "sysadmin", "linux", "guides", "open-source", "programming", "software", "cybersecurity"]
   author: alld.dev
-  # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  images: [""]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -63,7 +62,7 @@ params:
     safari_pinned_tab: "/icon.ico"
 
   label:
-    text: "Home"
+    text: "Início"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -71,7 +70,7 @@ params:
   profileMode:
     enabled: enable # needs to be explicitly set
     title: alld.dev
-    subtitle: "Seja bem vindo!"
+    subtitle: "Sejam bem vindos!"
     imageUrl: "/icon.ico"
     imageWidth: 120
     imageHeight: 120
@@ -92,11 +91,11 @@ params:
       url: "https://github.com/"
     - name: linkedin
       url: "https://github.com/"
-    - name: email
-      url: "https://github.com/"
     - name: instagram
       url: "https://github.com/"
-
+    - name: email
+      url: "https://github.com/"
+    
   # analytics:
     # google:
       # SiteVerificationTag: "XYZabc"
@@ -144,10 +143,6 @@ menu:
       name: ~/pesquisar
       url: search/
       weight: 30
-    - identifier: alld.dev
-      name: ~/alld.dev
-      url: https://example.org
-      weight: 40
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
 # markup:
