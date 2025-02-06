@@ -1,14 +1,14 @@
 ---
-title: "My post"
+title: "Example header post"
 date: 2020-09-15T11:30:03+00:00
 # weight: 1
-# aliases: ["/first"]
+# aliases: [""]
 tags: ["my", "post"]
 author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
-draft: false
+draft: true
 hidemeta: false
 comments: false
 description: "Desc Text."
@@ -32,4 +32,4 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-# Example
+# Title of post
