@@ -1,4 +1,4 @@
-baseURL: "https://new.alld.dev/"
+baseURL: "https://example.org" # "https://new.alld.dev/"
 title: alld.dev
 paginate: 5
 theme: PaperMod
