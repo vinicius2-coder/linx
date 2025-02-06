@@ -1,6 +1,6 @@
 ---
 title: "Gerenciando Sessões no Terminal com screen"
-date: "Alessandro César Rosão"
+date: 2020-09-15T11:30:03+00:00
 author: "Alessandro César Rosão"
 categories: ["Linux", "Terminal", "Produtividade"]
 tags: ["screen", "terminal", "automação", "servidor"]
