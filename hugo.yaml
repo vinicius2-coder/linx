@@ -2,11 +2,13 @@ baseURL: "https://new.alld.dev/"
 title: alld.dev
 pagerSize: 5
 theme: PaperMod
+languageCode: pt
 
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+enableEmoji: true
 
 minify:
   disableXML: true
@@ -25,7 +27,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: alld.dev
   description: "Site pessoal de Alessandro César Rosão"
-  keywords: [Blog, Portfolio, Desenvolvedor, SysAdmin, Hacking]
+  keywords: ["hacking", "sysadmin", "linux", "guides", "open-source", "programming", "software", "cybersecurity"]
   author: alld.dev
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
