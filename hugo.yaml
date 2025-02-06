@@ -26,10 +26,10 @@ outputs:
 ###########################################################
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: alld.dev
-  description: "Site pessoal de Alessandro César Rosão"
-  keywords: ["hacking", "sysadmin", "linux", "guides", "open-source", "programming", "software", "cybersecurity"]
-  author: alld.dev
+  title: Linx
+  description: "Site pessoal de Linx"
+  keywords: ["blog", "posts"]
+  author: Linx
   images: [""]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
@@ -55,11 +55,12 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "/icon.ico"
-    favicon16x16: "/icon.ico"
-    favicon32x32: "/icon.ico"
-    apple_touch_icon: "/icon.ico"
-    safari_pinned_tab: "/icon.ico"
+    # favicon: "/icon.ico"
+    favicon: "https://cdn-icons-png.flaticon.com/512/6042/6042038.png"
+    favicon16x16: "https://cdn-icons-png.flaticon.com/512/6042/6042038.png"
+    favicon32x32: "https://cdn-icons-png.flaticon.com/512/6042/6042038.png"
+    apple_touch_icon: "https://cdn-icons-png.flaticon.com/512/6042/6042038.png"
+    safari_pinned_tab: "https://cdn-icons-png.flaticon.com/512/6042/6042038.png"
 
   label:
     text: "Início"
@@ -69,9 +70,9 @@ params:
   # profile-mode
   profileMode:
     enabled: enable # needs to be explicitly set
-    title: alld.dev
-    subtitle: "Sejam bem vindos!"
-    imageUrl: "/icon.ico"
+    title: Linx
+    subtitle: "Sejam bem vindos ao meu blog!"
+    imageUrl: "https://cdn-icons-png.flaticon.com/512/6042/6042038.png"
     imageWidth: 120
     imageHeight: 120
     imageTitle: logo
@@ -84,17 +85,17 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Olá \U0001F44B"
-    Content: Sejam bem vindos!
+    Content: Sejam bem vindos ao meu blog!
 
   socialIcons:
     - name: github
-      url: "https://github.com/AlldDev"
+      url: "#"
     - name: linkedin
-      url: "https://www.linkedin.com/in/alessandro-césar-rosão/"
+      url: "#"
     - name: instagram
-      url: "https://instagram.com/alld.dev"
+      url: "#"
     - name: email
-      url: "mailto:suporte@alld.dev"
+      url: "#"
     
   # analytics:
     # google:
@@ -110,7 +111,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/AlldDev/alld.dev/content"
+    URL: "https://github.com/<your-user>/<your-repo>/content"
     Text: "Sugerir alteração" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -132,15 +133,15 @@ params:
 menu:
   main:
     - identifier: blog
-      name: ~/postagens
+      name: Postagens
       url: /posts/
       weight: 10
     - identifier: categories
-      name: ~/categorias
+      name: Categorias
       url: /categories/
       weight: 20
     - identifier: search
-      name: ~/pesquisar
+      name: Buscar
       url: search/
       weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
