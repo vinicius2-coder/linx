@@ -135,9 +135,9 @@ menu:
       name: ~/postagens
       url: /posts/
       weight: 10
-    - identifier: tags
-      name: ~/tags
-      url: /tags/
+    - identifier: categories
+      name: ~/categorias
+      url: /categories/
       weight: 20
     - identifier: search
       name: ~/pesquisar
