@@ -118,7 +118,7 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-## Instalando o PHP 7.2 no Ubuntu Server
+## Instalando o PHP 8.1 no Ubuntu Server
 
 Adicione o repositório necessário:
 
@@ -131,13 +131,13 @@ sudo apt update
 Instale os pacotes do PHP:
 
 ```bash
-sudo apt install php7.2 libapache2-mod-php7.2 php7.2-common php7.2-gmp php7.2-curl php7.2-intl php7.2-mbstring php7.2-xmlrpc php7.2-mysql php7.2-gd php7.2-xml php7.2-cli php7.2-zip
+sudo apt install php8.1 libapache2-mod-php8.1 php8.1-common php8.1-gmp php8.1-curl php8.1-intl php8.1-mbstring php8.1-xmlrpc php8.1-mysql php8.1-gd php8.1-xml php8.1-cli php8.1-zip
 ```
 
 Edite o arquivo de configuração:
 
 ```bash
-sudo nano /etc/php/7.2/apache2/php.ini
+sudo nano /etc/php/8.1/apache2/php.ini
 ```
 
 Modifique os seguintes valores:
