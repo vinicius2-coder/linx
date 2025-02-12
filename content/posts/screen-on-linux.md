@@ -205,7 +205,7 @@ O `screen` é uma ferramenta **indispensável** para administradores de sistemas
 
 Com ele, você pode:  
 
-✅ **Manter processos rodando mesmo após sair do terminal.**  
-✅ **Gerenciar múltiplas janelas dentro da mesma sessão.**  
-✅ **Executar comandos automaticamente dentro de sessões.**  
-✅ **Monitorar logs e executar tarefas de longa duração de forma eficiente.**  
+**Manter processos rodando mesmo após sair do terminal.**  
+**Gerenciar múltiplas janelas dentro da mesma sessão.**  
+**Executar comandos automaticamente dentro de sessões.**  
+**Monitorar logs e executar tarefas de longa duração de forma eficiente.**  
