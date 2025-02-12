@@ -236,7 +236,7 @@ Reinicie o Apache:
 
 Acesse o endereço de IP público do seu servidor no navegador. Preencha os dados para criar um usuário administrador e conectar ao banco de dados com as informações configuradas anteriormente. Exemplo:<br><br>
 
-![Nextcloud Install](https://github.com/vinicius2-coder/linx/blob/main/static/images/nextcloud_install.png)
+![Nextcloud Install](/images/nextcloud_install.png)
 
 Após preencher os dados clique em **Instalar** e aguarde, o Nextcloud estará pronto para uso.
 
