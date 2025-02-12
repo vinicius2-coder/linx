@@ -45,7 +45,7 @@ Habilite o serviço para iniciar com o sistema:
 Neste ponto você precisa redirecionar as portas 80 e 443 para o IP interno da máquina, e depois, liberar essas portas no seu firewall de borda, para ficarem acessíveis ao mundo, ou apenas ao seu IP público.
 Para testar se o Apache2 está funcionando, acesse o IP público do servidor ou o domínio pelo navegador. Exemplo da página que deve ser retornada:<br><br>
 
-![Apache](https://github.com/vinicius2-coder/linx/blob/main/static/images/apache2.png)
+![Apache](/images/apache2.png)
 
 <br><br>
 ## Instalando o MariaDB no Ubuntu
