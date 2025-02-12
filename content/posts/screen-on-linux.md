@@ -1,7 +1,7 @@
 ---
 title: "Gerenciando Sessões no Terminal com screen"
-date: 2020-09-15T11:30:03+00:00
-author: "Alessandro César Rosão"
+date: 2025-02-12T15:30:03+00:00
+author: "Vinicius R Rocha"
 categories: ["Linux", "Terminal", "Produtividade"]
 tags: ["screen", "terminal", "automação", "servidor"]
 ---
@@ -14,7 +14,7 @@ A seguir, veja como instalar, usar e dominar o `screen` para tornar seu fluxo de
 
 ---
 
-## 🛠 Instalação do `screen`  
+## Instalação do `screen`  
 
 O `screen` está disponível na maioria das distribuições Linux. Para instalá-lo, use o gerenciador de pacotes correspondente ao seu sistema:  
 
@@ -37,9 +37,9 @@ Após a instalação, o `screen` já pode ser utilizado diretamente no terminal.
 
 ---
 
-## 🎯 Criando e Gerenciando Sessões `screen`  
+## Criando e Gerenciando Sessões `screen`  
 
-### 1️⃣ Criar uma nova sessão  
+### Criar uma nova sessão  
 
 Para iniciar uma nova sessão do `screen`, basta executar:  
 
@@ -55,7 +55,7 @@ Caso precise **nomear a sessão**, facilitando sua identificação posteriorment
 screen -S minha_sessao
 ```
 
-### 2️⃣ Desanexar uma sessão sem fechá-la  
+### Desanexar uma sessão sem fechá-la  
 
 Se precisar **voltar ao terminal principal** sem encerrar o que está rodando no `screen`, pressione:  
 
@@ -65,7 +65,7 @@ Ctrl + A, depois D
 
 Isso **desanexará a sessão**, permitindo que ela continue rodando em segundo plano.  
 
-### 3️⃣ Listar sessões ativas  
+### Listar sessões ativas  
 
 Se houver várias sessões em execução, você pode listar todas elas com:  
 
@@ -83,7 +83,7 @@ There are screens on:
 
 Cada sessão possui um **ID** único, usado para reconectá-la.  
 
-### 4️⃣ Reanexar uma sessão  
+### Reanexar uma sessão  
 
 Caso queira **retornar** a uma sessão desanexada:  
 
@@ -103,7 +103,7 @@ Se houver apenas uma sessão ativa, basta rodar:
 screen -r
 ```
 
-### 5️⃣ Encerrar uma sessão `screen`  
+### Encerrar uma sessão `screen`  
 
 Para **fechar completamente** uma sessão, você pode:  
 
@@ -119,7 +119,7 @@ Para **fechar completamente** uma sessão, você pode:
 
 ---
 
-## 🔥 Comandos Essenciais do `screen`  
+## Comandos Essenciais do `screen`  
 
 Enquanto estiver dentro de uma sessão `screen`, utilize os atalhos abaixo para gerenciar seu ambiente com mais eficiência:  
 
@@ -144,7 +144,7 @@ Esses atalhos ajudam a gerenciar múltiplas janelas e tornam o uso do `screen` m
 
 ---
 
-## 🚀 Executando Comandos Diretamente no `screen`  
+## Executando Comandos Diretamente no `screen`  
 
 O `screen` também permite **executar comandos automaticamente dentro de uma sessão**, sem necessidade de interagir diretamente com ela.  
 
@@ -164,9 +164,9 @@ Isso é útil para rodar **processos automatizados**, como backups e verificaç�
 
 ---
 
-## 📌 Aplicações Práticas do `screen`  
+## Aplicações Práticas do `screen`  
 
-### ✅ Manter processos rodando mesmo após a desconexão  
+### Manter processos rodando mesmo após a desconexão  
 
 Se você está conectado a um servidor remoto e precisa garantir que um comando continue executando mesmo se sua conexão cair, rode:  
 
@@ -176,7 +176,7 @@ screen -S meu_processo
 
 Dentro da sessão, inicie seu processo normalmente. Depois, pressione `Ctrl + A, D` para desanexar e sair. Se precisar voltar, basta usar `screen -r meu_processo`.  
 
-### ✅ Monitoramento contínuo de logs  
+### Monitoramento contínuo de logs  
 
 O `screen` facilita o monitoramento de arquivos de log em tempo real. Para acompanhar um log sem que a sessão seja fechada após sair:  
 
@@ -187,7 +187,7 @@ tail -f /var/log/syslog
 
 Isso mantém o acompanhamento do log rodando em segundo plano.  
 
-### ✅ Compartilhamento de sessão com outro usuário  
+### Compartilhamento de sessão com outro usuário  
 
 Se precisar compartilhar sua sessão com outra pessoa logada no mesmo servidor, use:  
 
@@ -199,7 +199,7 @@ Isso permite que ambos os usuários vejam e interajam com o mesmo terminal.
 
 ---
 
-## 🔚 Conclusão  
+## Conclusão  
 
 O `screen` é uma ferramenta **indispensável** para administradores de sistemas, desenvolvedores e qualquer pessoa que trabalhe com servidores Linux.  
 
