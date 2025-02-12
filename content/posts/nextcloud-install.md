@@ -1,19 +1,17 @@
 ---
-title: "Como instalar o Nextcloud no Linux para criar uma Nuvem Privada?"
-date: 2025-02-06T11:30:03+00:00
-author: "Alessandro César Rosão"
+title: "Como instalar o Nextcloud no Linux para criar uma Nuvem Privada!"
+date: 2025-02-12T11:00:03+00:00
+author: "Vinicius R. Rocha"
 categories: ["Linux", "Terminal", "Nextcloud"]
 tags: ["nextcloud", "terminal", "nuvem", "servidor"]
 ---
 
 Neste tutorial, irei demonstrar como instalar o Nextcloud no Ubuntu. A instalação foi realizada em um ambiente de testes com máquina virtual. Caso utilize um VPS, ajuste as informações conforme necessário.
-
-A versão utilizada foi o **Ubuntu Server 18.04**, mas os passos devem funcionar em outras versões.
+A versão utilizada foi o **Ubuntu Server 24.04**, mas os passos devem funcionar em outras versões anteriores como **22.04** ou **20.08**, ou até mesmo **18.04**.
 
 ## O que é o Nextcloud?
 
 O Nextcloud é um software open-source que permite hospedar e compartilhar arquivos de forma segura e privativa. Ele é semelhante ao Dropbox, mas com código-fonte aberto, proporcionando mais controle e privacidade sobre seus arquivos, além da possibilidade de personalizar a instalação.
-
 Se deseja uma solução de armazenamento onde tenha total controle sobre o servidor e a plataforma, o Nextcloud é a melhor escolha.
 
 ## O que você precisa?
@@ -27,7 +25,7 @@ Se deseja uma solução de armazenamento onde tenha total controle sobre o servi
 O primeiro passo é atualizar as dependências do seu servidor para garantir uma instalação eficaz:
 
 ```bash
-apt-get update
+~# apt update && apt upgrade -y
 ```
 
 ## Instalando o Apache2 no Ubuntu
@@ -35,42 +33,47 @@ apt-get update
 Usaremos o Apache2, um dos servidores web mais populares. Para instalá-lo, execute:
 
 ```bash
-sudo apt install apache2
+~# apt install apache2
 ```
 
 Habilite o serviço para iniciar com o sistema:
 
 ```bash
-sudo systemctl enable apache2.service
+~# systemctl enable apache2.service
 ```
 
-Para testar se o Apache2 está funcionando, acesse o IP do servidor ou o domínio pelo navegador.
+Neste ponto você precisa redirecionar as portas 80 e 443 para o IP interno da máquina, e depois, liberar essas portas no seu firewall de borda, para ficarem acessíveis ao mundo, ou apenas ao seu IP público.
+Para testar se o Apache2 está funcionando, acesse o IP público do servidor ou o domínio pelo navegador. Exemplo da página que deve ser retornada:<br><br>
 
+![Apache](https://github.com/vinicius2-coder/linx/blob/main/static/images/apache2.png)
+
+<br><br>
 ## Instalando o MariaDB no Ubuntu
 
 O MariaDB é uma ramificação do MySQL e será usado como banco de dados. Instale-o com:
 
 ```bash
-sudo apt-get install mariadb-server mariadb-client
+~# apt install mariadb-server mariadb-client
 ```
 
 Habilite o serviço:
 
 ```bash
-sudo systemctl enable mariadb.service
+~# systemctl enable mariadb.service
 ```
 
 Agora, execute a configuração inicial:
 
 ```bash
-sudo mysql_secure_installation
+~# mysql_secure_installation
 ```
 
 Responda às perguntas conforme abaixo:
 
 ```plaintext
-Enter current password for root (enter for none): [Digite a senha atual]
-Set root password? [Y/n]: Y
+Enter current password for root (enter for none): [Deixe vazio]
+Switch to unix_socket authentication [Y/n] Y
+Change the root password? [Y/n]: Y
 New password: [Digite uma nova senha]
 Re-enter new password: [Confirme a senha]
 Remove anonymous users? [Y/n]: Y
@@ -82,7 +85,7 @@ Reload privilege tables now? [Y/n]: Y
 Reinicie o serviço:
 
 ```bash
-sudo systemctl restart mariadb.service
+~# systemctl restart mariadb.service
 ```
 
 ## Configurando o banco de dados do Nextcloud
@@ -90,7 +93,7 @@ sudo systemctl restart mariadb.service
 Acesse o MariaDB:
 
 ```bash
-sudo mysql -u root -p
+~# mysql -u root -p
 ```
 
 Crie o banco de dados:
@@ -123,21 +126,23 @@ EXIT;
 Adicione o repositório necessário:
 
 ```bash
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:ondrej/php
-sudo apt update
+~# apt install software-properties-common
+~# add-apt-repository ppa:ondrej/php
+~# apt update
 ```
 
 Instale os pacotes do PHP:
 
 ```bash
-sudo apt install php8.1 libapache2-mod-php8.1 php8.1-common php8.1-gmp php8.1-curl php8.1-intl php8.1-mbstring php8.1-xmlrpc php8.1-mysql php8.1-gd php8.1-xml php8.1-cli php8.1-zip
+~# apt install php8.1 libapache2-mod-php8.1 php8.1-common php8.1-gmp php8.1-curl php8.1-intl php8.1-mbstring php8.1-xmlrpc php8.1-mysql php8.1-gd php8.1-xml php8.1-cli php8.1-zip
 ```
+
+Neste momento, caso não possua o vim ou o nano na máquina, instale.
 
 Edite o arquivo de configuração:
 
 ```bash
-sudo nano /etc/php/8.1/apache2/php.ini
+~# vim /etc/php/8.1/apache2/php.ini
 ```
 
 Modifique os seguintes valores:
@@ -145,47 +150,47 @@ Modifique os seguintes valores:
 ```ini
 file_uploads = On
 allow_url_fopen = On
-memory_limit = 256M
-upload_max_filesize = 100M
+memory_limit = 512M
+upload_max_filesize = 300M
 max_execution_time = 360
 ```
 
 Reinicie o Apache para aplicar as configurações:
 
 ```bash
-sudo systemctl restart apache2.service
+~# systemctl restart apache2.service
 ```
 
 ## Baixando e instalando o Nextcloud
 
-Baixe a versão mais recente:
+Baixe a versão mais recente dentro da sua home mesmo:
 
 ```bash
-wget https://download.nextcloud.com/server/releases/latest.zip
+~# wget https://download.nextcloud.com/server/releases/latest.zip
 ```
 
-Instale o **unzip** (caso não tenha):
+Neste ponto instale o **zip** e o **unzip** (caso não tenha), vamos precisar:
 
 ```bash
-apt-get install unzip
+~# apt install zip unzip
 ```
 
 Extraia o arquivo:
 
 ```bash
-unzip latest.zip
+~# unzip latest.zip
 ```
 
-Mova a pasta para o diretório do Apache:
+Mova a pasta recém extraída para o diretório padrão do Apache:
 
 ```bash
-sudo mv nextcloud /var/www/html/
+~# mv nextcloud /var/www/html/
 ```
 
 Defina as permissões corretas:
 
 ```bash
-sudo chown -R www-data:www-data /var/www/html/nextcloud
+~# chown -R www-data:www-data /var/www/html/nextcloud
 ```
 
 ## Configurando o servidor Apache
@@ -193,10 +198,10 @@ sudo chown -R www-data:www-data /var/www/html/nextcloud
 Crie um arquivo de configuração:
 
 ```bash
-sudo nano /etc/apache2/sites-available/nextcloud.conf
+ ~# vim /etc/apache2/sites-available/nextcloud.conf
 ```
 
-Adicione o seguinte conteúdo:
+Adicione o seguinte conteúdo e edite conforme preferir:
 
 ```apache
 <VirtualHost *:80>
@@ -217,21 +222,23 @@ Adicione o seguinte conteúdo:
 Salve o arquivo e desative a configuração padrão do Apache:
 
 ```bash
-sudo a2dissite 000-default
-sudo a2ensite nextcloud
+~# a2dissite 000-default
+~# a2ensite nextcloud
 ```
 
 Reinicie o Apache:
 
 ```bash
-systemctl restart apache2
+~# systemctl restart apache2
 ```
 
 ## Finalizando a instalação do Nextcloud
 
-Acesse o endereço do seu servidor no navegador. Preencha os dados para criar um usuário administrador e conectar ao banco de dados com as informações configuradas anteriormente.
+Acesse o endereço de IP público do seu servidor no navegador. Preencha os dados para criar um usuário administrador e conectar ao banco de dados com as informações configuradas anteriormente. Exemplo:<br><br>
 
-Clique em **"Concluir Configuração"** e aguarde. O Nextcloud estará pronto para uso!
+![Nextcloud Install](https://github.com/vinicius2-coder/linx/blob/main/static/images/nextcloud_install.png)
+
+Após preencher os dados clique em **Instalar** e aguarde, o Nextcloud estará pronto para uso.
 
 ## Conclusão
 
