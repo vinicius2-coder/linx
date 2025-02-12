@@ -243,3 +243,39 @@ Após preencher os dados clique em **Instalar** e aguarde, o Nextcloud estará p
 ## Conclusão
 
 O Nextcloud é uma excelente opção para armazenar arquivos de forma segura, seja para uso pessoal ou empresarial. Se ainda não testou, vale a pena experimentar!
+
+## Dica adicional!
+
+É possível agora, com o Nextcloud funcionando, instalar um certificado SSL na sua URL própria, vamos lá!
+
+Primeiro instale as bibliotecas do Python para o Certbot do Apache:
+
+```bash
+ ~# apt install python3-certbot-apache
+```
+
+Depois execute este comando para criar o certificado:
+
+```bash
+ ~# certbot --apache --agree-tos --preferred-challenges http -d seudominio.com.br
+```
+
+Aqui responda com um endereço de e-mail para receber notificações sobre o certificado:
+
+````bash
+Enter email address (used for urgent renewal and security notices)
+ (Enter 'c' to cancel): suaconta@seudominio.com.br
+````
+
+Em seguida:
+
+````bash
+(Y)es/(N)o: Y
+````
+
+A resposta será essa, caso dê tudo certo com o certificado:
+````bash
+Deploying certificate
+Successfully deployed certificate for seudominio.com.br to /etc/apache2/sites-available/nextcloud-le-ssl.conf
+Congratulations! You have successfully enabled HTTPS on https://seudominio.com.br
+````
