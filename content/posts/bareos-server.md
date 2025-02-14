@@ -50,6 +50,9 @@ Execute o script para adicionar o repositório:
 ````bash
 ~# sh add_bareos_repositories.sh
 ````
+
+A saída será essa:
+
 ````bash
 Repository https://download.bareos.org/current/EL_9 successfully added.
 ````
