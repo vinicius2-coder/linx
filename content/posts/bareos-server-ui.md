@@ -76,7 +76,7 @@ Depois de criar o usuário, saia do **bconsole** e reinicie o webserver e o bare
 Basta acessar a interface acessando assim:
 http://seuIPlocal/bareos-webui/
 
-![bareos-webui](/images/bareos-webui.png/)
+![bareos-webui](/images/bareos-webui.png)
 
 
 ## Dica adicional
