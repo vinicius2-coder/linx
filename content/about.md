@@ -1,7 +1,7 @@
 ---
 title: "Sobre"
 date: 2025-02-01T00:00:03+00:00
-tags: ["quem-e-vinicius-coder2?", "sobre", "saiba-mais"]
+tags: ["quem-e-vinicius2-coder?", "sobre", "saiba-mais"]
 author: "Vinicius R Rocha"
 ---
 
